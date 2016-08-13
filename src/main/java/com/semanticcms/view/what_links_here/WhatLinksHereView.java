@@ -66,6 +66,15 @@ public class WhatLinksHereView extends View {
 		return null;
 	}
 
+	/**
+	 * Not sure if this would be a benefit to search engines, but we'll be on the safe side
+	 * and focus on search engines seeing the original content.
+	 */
+	@Override
+	public boolean getAllowRobots(Page page) {
+		return false;
+	}
+
 	@Override
 	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
 		PageRef pageRef = page.getPageRef();
