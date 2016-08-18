@@ -57,6 +57,14 @@ public class WhatLinksHereView extends View {
 	}
 
 	/**
+	 * Does not apply to global navigation since "here" is not intuitive.
+	 */
+	@Override
+	public boolean getAppliesGlobally() {
+		return false;
+	}
+
+	/**
 	 * TODO: Is there a computationally inexpensive way to see if anything links here (without full page tree traversal?)
 	 */
 	@Override
