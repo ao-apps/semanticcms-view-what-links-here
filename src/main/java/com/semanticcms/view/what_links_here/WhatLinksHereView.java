@@ -56,6 +56,14 @@ public class WhatLinksHereView extends View {
 		return VIEW_NAME;
 	}
 
+	/**
+	 * TODO: Is there a computationally inexpensive way to see if anything links here (without full page tree traversal?)
+	 */
+	@Override
+	public boolean isApplicable(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
+		return true;
+	}
+
 	@Override
 	public String getDescription(Page page) {
 		return null;
