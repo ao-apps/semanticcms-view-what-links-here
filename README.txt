@@ -1,4 +1,4 @@
-SemanticCMS view of the content of the current page.
+SemanticCMS view of which pages and elements link to the current page.
 
 For questions or support, please contact:
 
@@ -10,5 +10,5 @@ For questions or support, please contact:
     Phone: (251)607-9556
 
 The latest released version is always available:
-    Binary-only: https://www.aoindustries.com/lib/semanticcms-view-content.jar
-    With Source: https://www.aoindustries.com/src/semanticcms-view-content.src.jar
+    Binary-only: https://www.aoindustries.com/lib/semanticcms-view-what-links-here.jar
+    With Source: https://www.aoindustries.com/src/semanticcms-view-what-links-here.src.jar
