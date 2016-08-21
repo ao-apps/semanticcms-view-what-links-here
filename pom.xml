@@ -27,7 +27,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 	<parent>
 		<groupId>com.semanticcms</groupId>
 		<artifactId>semanticcms</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>1.0</version>
 	</parent>
 
 	<groupId>com.semanticcms</groupId>
