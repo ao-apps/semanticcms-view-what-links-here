@@ -46,10 +46,6 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<tag>HEAD</tag>
 	</scm>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
