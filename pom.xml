@@ -39,15 +39,6 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 	<url>https://semanticcms.com/docs/semanticcms-view-what-links-here/</url>
 	<description>SemanticCMS view of which pages and elements link to the current page.</description>
 
-	<developers>
-		<developer>
-			<name>AO Industries, Inc.</name>
-			<email>support@aoindustries.com</email>
-			<organization>AO Industries, Inc.</organization>
-			<organizationUrl>https://www.aoindustries.com/</organizationUrl>
-		</developer>
-	</developers>
-
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-view-what-links-here.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-view-what-links-here.git</developerConnection>
