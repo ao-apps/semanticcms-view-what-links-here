@@ -87,7 +87,7 @@ public class WhatLinksHereView extends View {
 	 * and focus on search engines seeing the original content.
 	 */
 	@Override
-	public boolean getAllowRobots(Page page) {
+	public boolean getAllowRobots(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) {
 		return false;
 	}
 
