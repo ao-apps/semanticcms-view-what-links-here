@@ -38,6 +38,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 	<name>SemanticCMS View What Links Here</name>
 	<url>https://semanticcms.com/view-what-links-here/</url>
 	<description>SemanticCMS view of which pages and elements link to the current page.</description>
+	<inceptionYear>2013</inceptionYear>
 
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/semanticcms-view-what-links-here.git</connection>
