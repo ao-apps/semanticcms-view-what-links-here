@@ -115,11 +115,11 @@ public class WhatLinksHereView extends View {
 			false, // yuiConfig
 			true, // includeElements
 			null, // target
-			pageRef.getBookName(),
-			pageRef.getPath(),
-			pageRef.getBookName(),
-			pageRef.getPath(),
-			0
+			pageRef.getBookName(), // thisBook
+			pageRef.getPath(), // thisPage
+			pageRef.getBookName(), // linksToBook
+			pageRef.getPath(), // linksToPage
+			0 // maxDepth
 		);
 	}
 }
