@@ -107,7 +107,6 @@ public class WhatLinksHereView extends View {
 		out.println("</h1>");
 		NavigationTreeImpl.writeNavigationTreeImpl(
 			servletContext,
-			null, // No ELContext for servlets
 			request,
 			response,
 			out,
