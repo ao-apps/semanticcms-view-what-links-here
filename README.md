@@ -7,9 +7,6 @@
 * [Maven Central Repository](https://search.maven.org/#search%7Cgav%7C1%7Cg:%22com.semanticcms%22%20AND%20a:%22semanticcms-view-what-links-here%22)
 * [GitHub](https://github.com/aoindustries/semanticcms-view-what-links-here)
 
-## Modules
-* [SemanticCMS View What Links Here Book](https://semanticcms.com/view-what-links-here/book/)
-
 ## Contact Us
 For questions or support, please [contact us](https://www.aoindustries.com/contact):
 
