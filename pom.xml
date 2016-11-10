@@ -36,13 +36,12 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 	<packaging>jar</packaging>
 
 	<properties>
-		<bookPath>/view-what-links-here</bookPath>
 		<shortTitle>View What Links Here</shortTitle>
 		<description.html><![CDATA[<a target="_top" href="https://semanticcms.com/">SemanticCMS</a> view of which pages and elements link to the current page.]]></description.html>
 	</properties>
 
 	<name>SemanticCMS View What Links Here</name>
-	<url>https://semanticcms.com${bookPath}/</url><!-- Can't inherit due to multi-module -->
+	<url>https://semanticcms.com/view-what-links-here/</url>
 	<description>SemanticCMS view of which pages and elements link to the current page.</description>
 	<inceptionYear>2013</inceptionYear>
 
