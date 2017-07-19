@@ -40,6 +40,8 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<!-- These values are copied from the project being documented -->
 		<documented.groupId>com.semanticcms</documented.groupId>
 		<documented.artifactId>semanticcms-view-what-links-here</documented.artifactId>
+		<documented.javaVersion>1.6</documented.javaVersion>
+		<documented.javac.link.javaApi>${javac.link.javaApi.jdk16}</documented.javac.link.javaApi>
 		<documented.name>SemanticCMS View What Links Here</documented.name>
 		<documented.shortTitle>View What Links Here</documented.shortTitle>
 		<documented.url>https://semanticcms.com/view-what-links-here/</documented.url>
@@ -100,6 +102,11 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 					<artifactId>jstl-api</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.aoindustries</groupId>
+			<artifactId>ao-badges</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.aoindustries</groupId>
