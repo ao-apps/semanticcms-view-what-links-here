@@ -33,7 +33,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 
 	<groupId>com.semanticcms</groupId>
 	<artifactId>semanticcms-view-what-links-here</artifactId>
-	<version>1.4.3-SNAPSHOT</version>
+	<version>1.4.3</version>
 	<packaging>jar</packaging>
 
 	<properties>
@@ -51,7 +51,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<connection>scm:git:git://github.com/aoindustries/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/${project.artifactId}.git</developerConnection>
 		<url>https://github.com/aoindustries/${project.artifactId}</url>
-		<tag>HEAD</tag>
+		<tag>semanticcms-view-what-links-here-1.4.3</tag>
 	</scm>
 
 	<profiles>
