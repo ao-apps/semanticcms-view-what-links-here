@@ -1,6 +1,6 @@
 /*
  * semanticcms-view-what-links-here - SemanticCMS view of which pages and elements link to the current page.
- * Copyright (C) 2016  AO Industries, Inc.
+ * Copyright (C) 2016, 2017  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -23,6 +23,7 @@
 package com.semanticcms.view.what_links_here;
 
 import com.aoindustries.encoding.TextInXhtmlEncoder;
+import com.semanticcms.core.model.BookRef;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.model.PageRef;
 import com.semanticcms.core.servlet.CaptureLevel;
@@ -94,6 +95,7 @@ public class WhatLinksHereView extends View {
 	@Override
 	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
 		PageRef pageRef = page.getPageRef();
+		BookRef bookRef = pageRef.getBookRef();
 		Page contentRoot = CapturePage.capturePage(
 			servletContext,
 			request,
@@ -115,9 +117,11 @@ public class WhatLinksHereView extends View {
 			false, // yuiConfig
 			true, // includeElements
 			null, // target
-			pageRef.getBookName(), // thisBook
+			bookRef.getDomain(), // thisDomain
+			bookRef.getName(), // thisBook
 			pageRef.getPath(), // thisPage
-			pageRef.getBookName(), // linksToBook
+			bookRef.getDomain(), // linksToDomain
+			bookRef.getName(), // linksToBook
 			pageRef.getPath(), // linksToPage
 			0 // maxDepth
 		);
