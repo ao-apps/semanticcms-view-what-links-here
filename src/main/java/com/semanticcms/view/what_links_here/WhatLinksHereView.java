@@ -26,7 +26,7 @@ import com.aoindustries.encoding.TextInXhtmlEncoder;
 import com.semanticcms.core.model.BookRef;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.model.PageRef;
-import com.semanticcms.core.servlet.CaptureLevel;
+import com.semanticcms.core.pages.CaptureLevel;
 import com.semanticcms.core.servlet.CapturePage;
 import com.semanticcms.core.servlet.SemanticCMS;
 import com.semanticcms.core.servlet.View;
@@ -118,11 +118,11 @@ public class WhatLinksHereView extends View {
 			true, // includeElements
 			null, // target
 			bookRef.getDomain(), // thisDomain
-			bookRef.getName(), // thisBook
-			pageRef.getPath(), // thisPage
+			bookRef.getPath(), // thisBook
+			pageRef.getPath().toString(), // thisPage
 			bookRef.getDomain(), // linksToDomain
-			bookRef.getName(), // linksToBook
-			pageRef.getPath(), // linksToPage
+			bookRef.getPath(), // linksToBook
+			pageRef.getPath().toString(), // linksToPage
 			0 // maxDepth
 		);
 	}
