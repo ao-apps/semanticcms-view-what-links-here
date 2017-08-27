@@ -23,14 +23,14 @@
 package com.semanticcms.view.what_links_here;
 
 import com.aoindustries.encoding.TextInXhtmlEncoder;
+import com.semanticcms.core.controller.CapturePage;
+import com.semanticcms.core.controller.SemanticCMS;
 import com.semanticcms.core.model.BookRef;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.model.PageRef;
 import com.semanticcms.core.pages.CaptureLevel;
-import com.semanticcms.core.servlet.CapturePage;
-import com.semanticcms.core.servlet.SemanticCMS;
-import com.semanticcms.core.servlet.View;
-import com.semanticcms.core.servlet.impl.NavigationTreeImpl;
+import com.semanticcms.core.renderer.html.NavigationTreeRenderer;
+import com.semanticcms.core.renderer.html.View;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletContext;
@@ -107,7 +107,7 @@ public class WhatLinksHereView extends View {
 		out.print("<h1>What Links to ");
 		TextInXhtmlEncoder.encodeTextInXhtml(page.getTitle(), out);
 		out.println("</h1>");
-		NavigationTreeImpl.writeNavigationTreeImpl(
+		NavigationTreeRenderer.writeNavigationTreeImpl(
 			servletContext,
 			request,
 			response,
