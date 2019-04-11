@@ -30,7 +30,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 	</parent>
 
 	<groupId>com.semanticcms</groupId><artifactId>semanticcms-view-what-links-here</artifactId><version>1.4.4-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>bundle</packaging>
 
 	<properties>
 		<shortTitle>View What Links Here</shortTitle>
