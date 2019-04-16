@@ -37,7 +37,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<description.html><![CDATA[<a target="_top" href="https://semanticcms.com/">SemanticCMS</a> view of which pages and elements link to the current page.]]></description.html>
 	</properties>
 
-	<name>SemanticCMS 1 View What Links Here</name>
+	<name>SemanticCMS View What Links Here</name>
 	<url>https://semanticcms.com/view-what-links-here/</url>
 	<description>SemanticCMS view of which pages and elements link to the current page.</description>
 	<inceptionYear>2013</inceptionYear>

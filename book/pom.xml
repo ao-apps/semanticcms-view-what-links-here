@@ -37,7 +37,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<documented.groupId>com.semanticcms</documented.groupId><documented.artifactId>semanticcms-view-what-links-here</documented.artifactId>
 		<documented.javaVersion>1.7</documented.javaVersion>
 		<documented.javac.link.javaApi>${javac.link.javaApi.jdk7}</documented.javac.link.javaApi>
-		<documented.name>SemanticCMS 1 View What Links Here</documented.name>
+		<documented.name>SemanticCMS View What Links Here</documented.name>
 		<documented.shortTitle>View What Links Here</documented.shortTitle>
 		<documented.url>https://semanticcms.com/view-what-links-here/</documented.url>
 		<documented.description>SemanticCMS view of which pages and elements link to the current page.</documented.description>
