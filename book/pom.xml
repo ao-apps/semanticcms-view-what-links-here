@@ -29,7 +29,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<relativePath>../../parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.semanticcms</groupId><artifactId>semanticcms-view-what-links-here-book</artifactId><version>1.4.4-SNAPSHOT</version>
+	<groupId>com.semanticcms</groupId><artifactId>semanticcms-view-what-links-here-book</artifactId><version>1.4.4</version>
 	<packaging>bundle</packaging>
 
 	<properties>
@@ -57,7 +57,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<connection>scm:git:git://github.com/aoindustries/${documented.artifactId}.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/${documented.artifactId}.git</developerConnection>
 		<url>${documented.scm.url}</url>
-		<tag>HEAD</tag>
+		<tag>semanticcms-view-what-links-here-book-1.4.4</tag>
 	</scm>
 
 	<dependencyManagement>
