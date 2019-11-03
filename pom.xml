@@ -33,6 +33,10 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 	<packaging>bundle</packaging>
 
 	<properties>
+		<javaVersion>1.8</javaVersion>
+		<compiler.bootclasspath>${bootclasspath.jdk8}</compiler.bootclasspath>
+		<javac.bootclasspath>${bootclasspath.jdk8}</javac.bootclasspath>
+		<javac.link.javaApi>${javac.link.javaApi.jdk8}</javac.link.javaApi>
 		<shortTitle>View What Links Here</shortTitle>
 		<description.html><![CDATA[<a target="_top" href="https://semanticcms.com/">SemanticCMS</a> view of which pages and elements link to the current page.]]></description.html>
 	</properties>
