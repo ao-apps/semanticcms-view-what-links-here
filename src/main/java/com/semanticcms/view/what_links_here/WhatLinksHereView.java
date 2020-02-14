@@ -1,6 +1,6 @@
 /*
  * semanticcms-view-what-links-here - SemanticCMS view of which pages and elements link to the current page.
- * Copyright (C) 2016, 2017, 2018  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2018, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,7 +22,7 @@
  */
 package com.semanticcms.view.what_links_here;
 
-import com.aoindustries.encoding.TextInXhtmlEncoder;
+import com.aoindustries.html.Html;
 import com.semanticcms.core.controller.CapturePage;
 import com.semanticcms.core.controller.SemanticCMS;
 import com.semanticcms.core.model.BookRef;
@@ -32,7 +32,6 @@ import com.semanticcms.core.pages.CaptureLevel;
 import com.semanticcms.core.renderer.html.NavigationTreeRenderer;
 import com.semanticcms.core.renderer.html.View;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -93,7 +92,7 @@ public class WhatLinksHereView extends View {
 	}
 
 	@Override
-	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
+	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Html html, Page page) throws ServletException, IOException {
 		PageRef pageRef = page.getPageRef();
 		BookRef bookRef = pageRef.getBookRef();
 		Page contentRoot = CapturePage.capturePage(
@@ -103,15 +102,14 @@ public class WhatLinksHereView extends View {
 			SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
 			CaptureLevel.PAGE
 		);
-		PrintWriter out = response.getWriter();
-		out.print("<h1>What Links to ");
-		TextInXhtmlEncoder.encodeTextInXhtml(page.getTitle(), out);
-		out.println("</h1>");
+		html.out.write("<h1>What Links to ");
+		html.text(page.getTitle());
+		html.out.write("</h1>\n");
 		NavigationTreeRenderer.writeNavigationTree(
 			servletContext,
 			request,
 			response,
-			out,
+			html,
 			contentRoot,
 			false, // skipRoot
 			false, // yuiConfig
