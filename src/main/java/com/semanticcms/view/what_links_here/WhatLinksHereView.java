@@ -32,13 +32,30 @@ import com.semanticcms.core.servlet.View;
 import com.semanticcms.core.servlet.impl.NavigationTreeImpl;
 import java.io.IOException;
 import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class WhatLinksHereView extends View {
 
-	static final String VIEW_NAME = "what-links-here";
+	public static final String NAME = "what-links-here";
+
+	@WebListener("Registers the \"" + NAME + "\" view in SemanticCMS.")
+	public static class Initializer implements ServletContextListener {
+		@Override
+		public void contextInitialized(ServletContextEvent event) {
+			SemanticCMS.getInstance(event.getServletContext()).addView(new WhatLinksHereView());
+		}
+		@Override
+		public void contextDestroyed(ServletContextEvent event) {
+			// Do nothing
+		}
+	}
+
+	private WhatLinksHereView() {}
 
 	@Override
 	public Group getGroup() {
@@ -52,7 +69,7 @@ public class WhatLinksHereView extends View {
 
 	@Override
 	public String getName() {
-		return VIEW_NAME;
+		return NAME;
 	}
 
 	/**
