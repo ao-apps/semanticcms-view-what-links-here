@@ -50,6 +50,11 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<tag>HEAD</tag>
 	</scm>
 
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/aoindustries/semanticcms-view-what-links-here/issues</url>
+	</issueManagement>
+
 	<profiles>
 		<profile>
 			<id>release</id>
