@@ -34,7 +34,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 
 	<properties>
 		<shortTitle>View What Links Here</shortTitle>
-		<description.html><![CDATA[<a target="_top" href="https://semanticcms.com/">SemanticCMS</a> view of which pages and elements link to the current page.]]></description.html>
+		<description.html><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> view of which pages and elements link to the current page.]]></description.html>
 	</properties>
 
 	<name>SemanticCMS View What Links Here²</name>
