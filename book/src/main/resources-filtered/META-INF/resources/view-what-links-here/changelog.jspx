@@ -53,6 +53,14 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 				artifactId="@{documented.artifactId}"
 				scmUrl="@{project.scm.url}"
 			>
+				<!--
+					TODO: Support links from views:
+					Each link would have a fromView (which view links to the page)
+					News body content would provide fromView "news".
+					The WhatsNewView would link to default view "content" in current link.
+					If links from additional views, follow this with [View|View] links.
+					If no link from page, only from views, then the page name will not be a link.
+				-->
 				<ul>
 					<li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
 				</ul>
