@@ -1,6 +1,6 @@
 /*
  * semanticcms-view-what-links-here - SemanticCMS view of which pages and elements link to the current page.
- * Copyright (C) 2016, 2017, 2018, 2020  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2018, 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -22,7 +22,7 @@
  */
 package com.semanticcms.view.what_links_here;
 
-import com.aoindustries.html.Html;
+import com.aoindustries.html.Document;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.model.PageRef;
 import com.semanticcms.core.servlet.CaptureLevel;
@@ -108,7 +108,7 @@ public class WhatLinksHereView extends View {
 	}
 
 	@Override
-	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Html html, Page page) throws ServletException, IOException {
+	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Document document, Page page) throws ServletException, IOException {
 		PageRef pageRef = page.getPageRef();
 		Page contentRoot = CapturePage.capturePage(
 			servletContext,
@@ -117,14 +117,14 @@ public class WhatLinksHereView extends View {
 			SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
 			CaptureLevel.PAGE
 		);
-		html.out.write("<h1>What Links to ");
-		html.text(page.getTitle());
-		html.out.write("</h1>\n");
+		document.out.write("<h1>What Links to ");
+		document.text(page.getTitle());
+		document.out.write("</h1>\n");
 		NavigationTreeImpl.writeNavigationTreeImpl(
 			servletContext,
 			request,
 			response,
-			html,
+			document,
 			contentRoot,
 			false, // skipRoot
 			false, // yuiConfig
