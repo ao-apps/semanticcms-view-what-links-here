@@ -120,9 +120,9 @@ public class WhatLinksHereView extends View {
 			SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
 			CaptureLevel.PAGE
 		);
-		document.out.write("<h1>What Links to ");
-		document.text(page.getTitle());
-		document.out.write("</h1>\n");
+		document.h1__(h1 -> h1
+			.text("What Links to ").text(page.getTitle())
+		).nl();
 		NavigationTreeRenderer.writeNavigationTree(
 			servletContext,
 			request,
