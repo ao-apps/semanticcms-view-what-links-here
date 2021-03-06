@@ -22,7 +22,7 @@
  */
 package com.semanticcms.view.what_links_here;
 
-import com.aoindustries.html.Document;
+import com.aoindustries.html.FlowContent;
 import com.semanticcms.core.model.Page;
 import com.semanticcms.core.model.PageRef;
 import com.semanticcms.core.servlet.CaptureLevel;
@@ -108,7 +108,7 @@ public class WhatLinksHereView extends View {
 	}
 
 	@Override
-	public void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Document document, Page page) throws ServletException, IOException {
+	public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException {
 		PageRef pageRef = page.getPageRef();
 		Page contentRoot = CapturePage.capturePage(
 			servletContext,
@@ -117,14 +117,14 @@ public class WhatLinksHereView extends View {
 			SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
 			CaptureLevel.PAGE
 		);
-		document.h1__(h1 -> h1
+		flow.h1__(h1 -> h1
 			.text("What Links to ").text(page.getTitle())
 		).nl();
 		NavigationTreeImpl.writeNavigationTreeImpl(
 			servletContext,
 			request,
 			response,
-			document,
+			flow,
 			contentRoot,
 			false, // skipRoot
 			false, // yuiConfig
