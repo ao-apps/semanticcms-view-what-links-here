@@ -122,7 +122,7 @@ public class WhatLinksHereView extends View {
 		);
 		flow.h1__(h1 -> h1
 			.text("What Links to ").text(page.getTitle())
-		).nl();
+		);
 		NavigationTreeRenderer.writeNavigationTree(
 			servletContext,
 			request,
