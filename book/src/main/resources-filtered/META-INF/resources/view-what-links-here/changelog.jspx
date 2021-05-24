@@ -36,8 +36,8 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		title="@{documented.name} Changelog"
 		shortTitle="Changelog"
 		tocLevels="1"
-		datePublished="2016-10-31T03:26:24-0500"
-		dateModified="2021-03-19T01:22:30-05:00"
+		datePublished="2016-10-31T03:26:24-05:00"
+		dateModified="2021-05-22T13:07:02-05:00"
 	>
 		<c:if test="${fn:endsWith('@{project.version}', '-SNAPSHOT') and !fn:endsWith('@{project.version}', '-POST-SNAPSHOT')}">
 			<changelog:release
@@ -55,6 +55,9 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 					If links from additional views, follow this with [View|View] links.
 					If no link from page, only from views, then the page name will not be a link.
 				-->
+				<ul>
+					<li>Updated to <ao:a rel="nofollow" href="https://www.oracle.com/java/technologies/javaee/javaeetechnologies.html#javaee7">Java™ EE 7 Web Profile</ao:a> (Servlet 3.1, JSP 2.3, EL 3.0, and JSTL 1.2).</li>
+				</ul>
 			</changelog:release>
 		</c:if>
 
@@ -93,7 +96,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.4"
-			datePublished="2019-06-22T04:54:08-0500"
+			datePublished="2019-06-22T04:54:08-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -112,7 +115,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.3"
-			datePublished="2017-07-20T17:40:52-0500"
+			datePublished="2017-07-20T17:40:52-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -125,7 +128,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.2"
-			datePublished="2016-11-16T04:20:45-0600"
+			datePublished="2016-11-16T04:20:45-06:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -140,7 +143,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.1"
-			datePublished="2016-10-20T19:47:00-0500"
+			datePublished="2016-10-20T19:47:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -155,7 +158,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.4.0"
-			datePublished="2016-10-04T23:30:00-0500"
+			datePublished="2016-10-04T23:30:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -172,7 +175,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.3"
-			datePublished="2016-09-11T17:12:00-0500"
+			datePublished="2016-09-11T17:12:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -186,7 +189,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.2"
-			datePublished="2016-09-03T10:56:00-0500"
+			datePublished="2016-09-03T10:56:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -199,7 +202,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.1"
-			datePublished="2016-08-21T18:39:00-0500"
+			datePublished="2016-08-21T18:39:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
@@ -212,7 +215,7 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<changelog:release
 			projectName="@{documented.name}"
 			version="1.0"
-			datePublished="2016-08-19T23:22:00-0500"
+			datePublished="2016-08-19T23:22:00-05:00"
 			groupId="@{project.groupId}"
 			artifactId="@{documented.artifactId}"
 			scmUrl="@{project.scm.url}"
