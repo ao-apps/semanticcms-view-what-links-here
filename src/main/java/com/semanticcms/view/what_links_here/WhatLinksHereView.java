@@ -22,7 +22,7 @@
  */
 package com.semanticcms.view.what_links_here;
 
-import com.aoindustries.html.servlet.FlowContent;
+import com.aoapps.html.servlet.FlowContent;
 import com.semanticcms.core.controller.CapturePage;
 import com.semanticcms.core.controller.SemanticCMS;
 import com.semanticcms.core.model.BookRef;
