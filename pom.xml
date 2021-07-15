@@ -83,6 +83,11 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 		<url>https://github.com/aoindustries/semanticcms-view-what-links-here/issues</url>
 	</issueManagement>
 
+	<ciManagement>
+		<system>GitHub Actions</system>
+		<url>https://github.com/aoindustries/semanticcms-view-what-links-here/actions</url>
+	</ciManagement>
+
 	<repositories>
 		<!-- Repository required here, too, so can find parent -->
 		<repository>
