@@ -9,6 +9,7 @@
 [![license: LGPL v3](https://semanticcms.com/ao-badges/license-lgpl-3.0.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 [![Build](https://github.com/aoindustries/semanticcms-view-what-links-here/workflows/Build/badge.svg?branch=1.x)](https://github.com/aoindustries/semanticcms-view-what-links-here/actions?query=workflow%3ABuild)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.semanticcms/semanticcms-view-what-links-here/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.semanticcms/semanticcms-view-what-links-here)
 
 [SemanticCMS view of which pages and elements link to the current page](https://github.com/aoindustries/semanticcms-view-what-links-here).
 
