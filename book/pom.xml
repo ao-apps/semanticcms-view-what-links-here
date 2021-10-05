@@ -71,20 +71,20 @@ along with semanticcms-view-what-links-here.  If not, see <http://www.gnu.org/li
 	</developers>
 
 	<scm>
-		<connection>scm:git:git://github.com/aoindustries/semanticcms-view-what-links-here.git</connection>
-		<developerConnection>scm:git:git@github.com:aoindustries/semanticcms-view-what-links-here.git</developerConnection>
-		<url>https://github.com/aoindustries/semanticcms-view-what-links-here</url>
+		<connection>scm:git:git://github.com/ao-apps/semanticcms-view-what-links-here.git</connection>
+		<developerConnection>scm:git:git@github.com:ao-apps/semanticcms-view-what-links-here.git</developerConnection>
+		<url>https://github.com/ao-apps/semanticcms-view-what-links-here</url>
 		<tag>HEAD</tag>
 	</scm>
 
 	<issueManagement>
 		<system>GitHub Issues</system>
-		<url>https://github.com/aoindustries/semanticcms-view-what-links-here/issues</url>
+		<url>https://github.com/ao-apps/semanticcms-view-what-links-here/issues</url>
 	</issueManagement>
 
 	<ciManagement>
 		<system>GitHub Actions</system>
-		<url>https://github.com/aoindustries/semanticcms-view-what-links-here/actions</url>
+		<url>https://github.com/ao-apps/semanticcms-view-what-links-here/actions</url>
 	</ciManagement>
 
 	<repositories>
