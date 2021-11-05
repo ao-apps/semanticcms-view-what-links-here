@@ -41,7 +41,7 @@ import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class WhatLinksHereView extends View {
+public final class WhatLinksHereView extends View {
 
 	public static final String NAME = "what-links-here";
 
@@ -57,7 +57,9 @@ public class WhatLinksHereView extends View {
 		}
 	}
 
-	private WhatLinksHereView() {}
+	private WhatLinksHereView() {
+		// Do nothing
+	}
 
 	@Override
 	public Group getGroup() {
