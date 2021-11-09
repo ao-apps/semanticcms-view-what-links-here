@@ -99,9 +99,6 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
 			<releases>
 				<enabled>false</enabled>
 			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
 		</repository>
 	</repositories>
 
