@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 semanticcms-view-what-links-here - SemanticCMS view of which pages and elements link to the current page.
-Copyright (C) 2016, 2017, 2019, 2020, 2021  AO Industries, Inc.
+Copyright (C) 2016, 2017, 2019, 2020, 2021, 2022  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
@@ -37,7 +37,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
 		shortTitle="Changelog"
 		tocLevels="1"
 		datePublished="2016-10-31T03:26:24-05:00"
-		dateModified="2021-07-18T03:20:27-05:00"
+		dateModified="2022-03-21T05:50:15-05:00"
 	>
 		<c:if test="${fn:endsWith('@{project.version}', '-SNAPSHOT') and !fn:endsWith('@{project.version}', '-POST-SNAPSHOT')}">
 			<changelog:release
@@ -58,6 +58,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
 				-->
 				<ul>
 					<li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
+					<li>Updated dependencies.</li>
 				</ul>
 			</changelog:release>
 		</c:if>
