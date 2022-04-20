@@ -44,105 +44,105 @@ import javax.servlet.http.HttpServletResponse;
 
 public final class WhatLinksHereView extends View {
 
-	public static final String NAME = "what-links-here";
+  public static final String NAME = "what-links-here";
 
-	@WebListener("Registers the \"" + NAME + "\" view in HtmlRenderer.")
-	public static class Initializer implements ServletContextListener {
-		@Override
-		public void contextInitialized(ServletContextEvent event) {
-			HtmlRenderer.getInstance(event.getServletContext()).addView(new WhatLinksHereView());
-		}
-		@Override
-		public void contextDestroyed(ServletContextEvent event) {
-			// Do nothing
-		}
-	}
+  @WebListener("Registers the \"" + NAME + "\" view in HtmlRenderer.")
+  public static class Initializer implements ServletContextListener {
+    @Override
+    public void contextInitialized(ServletContextEvent event) {
+      HtmlRenderer.getInstance(event.getServletContext()).addView(new WhatLinksHereView());
+    }
+    @Override
+    public void contextDestroyed(ServletContextEvent event) {
+      // Do nothing
+    }
+  }
 
-	private WhatLinksHereView() {
-		// Do nothing
-	}
+  private WhatLinksHereView() {
+    // Do nothing
+  }
 
-	@Override
-	public Group getGroup() {
-		return Group.FIXED;
-	}
+  @Override
+  public Group getGroup() {
+    return Group.FIXED;
+  }
 
-	@Override
-	public String getDisplay() {
-		return "What Links Here";
-	}
+  @Override
+  public String getDisplay() {
+    return "What Links Here";
+  }
 
-	@Override
-	public String getName() {
-		return NAME;
-	}
+  @Override
+  public String getName() {
+    return NAME;
+  }
 
-	/**
-	 * Does not apply to global navigation since "here" is not intuitive.
-	 */
-	@Override
-	public boolean getAppliesGlobally() {
-		return false;
-	}
+  /**
+   * Does not apply to global navigation since "here" is not intuitive.
+   */
+  @Override
+  public boolean getAppliesGlobally() {
+    return false;
+  }
 
-	/**
-	 * TODO: Is there a computationally inexpensive way to see if anything links here (without full page tree traversal?)
-	 */
-	@Override
-	public boolean isApplicable(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
-		return true;
-	}
+  /**
+   * TODO: Is there a computationally inexpensive way to see if anything links here (without full page tree traversal?)
+   */
+  @Override
+  public boolean isApplicable(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
+    return true;
+  }
 
-	@Override
-	public String getDescription(Page page) {
-		return null;
-	}
+  @Override
+  public String getDescription(Page page) {
+    return null;
+  }
 
-	@Override
-	public String getKeywords(Page page) {
-		return null;
-	}
+  @Override
+  public String getKeywords(Page page) {
+    return null;
+  }
 
-	/**
-	 * Not sure if this would be a benefit to search engines, but we'll be on the safe side
-	 * and focus on search engines seeing the original content.
-	 */
-	@Override
-	public boolean getAllowRobots(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) {
-		return false;
-	}
+  /**
+   * Not sure if this would be a benefit to search engines, but we'll be on the safe side
+   * and focus on search engines seeing the original content.
+   */
+  @Override
+  public boolean getAllowRobots(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) {
+    return false;
+  }
 
-	@Override
-	public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException {
-		PageRef pageRef = page.getPageRef();
-		BookRef bookRef = pageRef.getBookRef();
-		Page contentRoot = CapturePage.capturePage(
-			servletContext,
-			request,
-			response,
-			SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
-			CaptureLevel.PAGE
-		);
-		flow.h1__(h1 -> h1
-			.text("What Links to ").text(page.getTitle())
-		);
-		NavigationTreeRenderer.writeNavigationTree(
-			servletContext,
-			request,
-			response,
-			flow,
-			contentRoot,
-			false, // skipRoot
-			false, // yuiConfig
-			true, // includeElements
-			null, // target
-			bookRef.getDomain(), // thisDomain
-			bookRef.getPath(), // thisBook
-			pageRef.getPath().toString(), // thisPage
-			bookRef.getDomain(), // linksToDomain
-			bookRef.getPath(), // linksToBook
-			pageRef.getPath().toString(), // linksToPage
-			0 // maxDepth
-		);
-	}
+  @Override
+  public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException {
+    PageRef pageRef = page.getPageRef();
+    BookRef bookRef = pageRef.getBookRef();
+    Page contentRoot = CapturePage.capturePage(
+      servletContext,
+      request,
+      response,
+      SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
+      CaptureLevel.PAGE
+    );
+    flow.h1__(h1 -> h1
+      .text("What Links to ").text(page.getTitle())
+    );
+    NavigationTreeRenderer.writeNavigationTree(
+      servletContext,
+      request,
+      response,
+      flow,
+      contentRoot,
+      false, // skipRoot
+      false, // yuiConfig
+      true, // includeElements
+      null, // target
+      bookRef.getDomain(), // thisDomain
+      bookRef.getPath(), // thisBook
+      pageRef.getPath().toString(), // thisPage
+      bookRef.getDomain(), // linksToDomain
+      bookRef.getPath(), // linksToBook
+      pageRef.getPath().toString(), // linksToPage
+      0 // maxDepth
+    );
+  }
 }
