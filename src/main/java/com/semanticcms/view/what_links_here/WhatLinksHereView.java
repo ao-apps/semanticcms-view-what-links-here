@@ -52,6 +52,7 @@ public final class WhatLinksHereView extends View {
     public void contextInitialized(ServletContextEvent event) {
       HtmlRenderer.getInstance(event.getServletContext()).addView(new WhatLinksHereView());
     }
+
     @Override
     public void contextDestroyed(ServletContextEvent event) {
       // Do nothing
@@ -117,32 +118,32 @@ public final class WhatLinksHereView extends View {
     PageRef pageRef = page.getPageRef();
     BookRef bookRef = pageRef.getBookRef();
     Page contentRoot = CapturePage.capturePage(
-      servletContext,
-      request,
-      response,
-      SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
-      CaptureLevel.PAGE
+        servletContext,
+        request,
+        response,
+        SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
+        CaptureLevel.PAGE
     );
     flow.h1__(h1 -> h1
-      .text("What Links to ").text(page.getTitle())
+            .text("What Links to ").text(page.getTitle())
     );
     NavigationTreeRenderer.writeNavigationTree(
-      servletContext,
-      request,
-      response,
-      flow,
-      contentRoot,
-      false, // skipRoot
-      false, // yuiConfig
-      true, // includeElements
-      null, // target
-      bookRef.getDomain(), // thisDomain
-      bookRef.getPath(), // thisBook
-      pageRef.getPath().toString(), // thisPage
-      bookRef.getDomain(), // linksToDomain
-      bookRef.getPath(), // linksToBook
-      pageRef.getPath().toString(), // linksToPage
-      0 // maxDepth
+        servletContext,
+        request,
+        response,
+        flow,
+        contentRoot,
+        false, // skipRoot
+        false, // yuiConfig
+        true, // includeElements
+        null, // target
+        bookRef.getDomain(), // thisDomain
+        bookRef.getPath(), // thisBook
+        pageRef.getPath().toString(), // thisPage
+        bookRef.getDomain(), // linksToDomain
+        bookRef.getPath(), // linksToBook
+        pageRef.getPath().toString(), // linksToPage
+        0 // maxDepth
     );
   }
 }
