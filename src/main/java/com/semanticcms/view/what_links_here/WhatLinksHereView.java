@@ -50,6 +50,7 @@ public final class WhatLinksHereView extends View {
     public void contextInitialized(ServletContextEvent event) {
       SemanticCMS.getInstance(event.getServletContext()).addView(new WhatLinksHereView());
     }
+
     @Override
     public void contextDestroyed(ServletContextEvent event) {
       // Do nothing
@@ -114,30 +115,30 @@ public final class WhatLinksHereView extends View {
   public <__ extends FlowContent<__>> void doView(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, __ flow, Page page) throws ServletException, IOException {
     PageRef pageRef = page.getPageRef();
     Page contentRoot = CapturePage.capturePage(
-      servletContext,
-      request,
-      response,
-      SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
-      CaptureLevel.PAGE
+        servletContext,
+        request,
+        response,
+        SemanticCMS.getInstance(servletContext).getRootBook().getContentRoot(),
+        CaptureLevel.PAGE
     );
     flow.h1__(h1 -> h1
-      .text("What Links to ").text(page.getTitle())
+            .text("What Links to ").text(page.getTitle())
     );
     NavigationTreeImpl.writeNavigationTreeImpl(
-      servletContext,
-      request,
-      response,
-      flow,
-      contentRoot,
-      false, // skipRoot
-      false, // yuiConfig
-      true, // includeElements
-      null, // target
-      pageRef.getBookName(), // thisBook
-      pageRef.getPath(), // thisPage
-      pageRef.getBookName(), // linksToBook
-      pageRef.getPath(), // linksToPage
-      0 // maxDepth
+        servletContext,
+        request,
+        response,
+        flow,
+        contentRoot,
+        false, // skipRoot
+        false, // yuiConfig
+        true, // includeElements
+        null, // target
+        pageRef.getBookName(), // thisBook
+        pageRef.getPath(), // thisPage
+        pageRef.getBookName(), // linksToBook
+        pageRef.getPath(), // linksToPage
+        0 // maxDepth
     );
   }
 }
