@@ -29,11 +29,11 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
 
-  <groupId>com.semanticcms</groupId><artifactId>semanticcms-view-what-links-here</artifactId><version>1.6.1-SNAPSHOT</version>
+  <groupId>com.semanticcms</groupId><artifactId>semanticcms-view-what-links-here</artifactId><version>1.7.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <properties>
-    <module.name>com.semanticcms.view.what_links_here</module.name>
+    <module.name>com.semanticcms.view.whatlinkshere</module.name>
     <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a>
 / <a target="${javadoc.target}" href="${project.url}">View What Links Here</a>]]></javadoc.breadcrumbs>
     <description.html><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> view of which pages and elements link to the current page.]]></description.html>
@@ -125,13 +125,6 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
             <!-- No "module-info.java" in some release builds -->
             <dependency>com.aoapps:ao-collections</dependency>
           </ignoredDependencies>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-checkstyle-plugin</artifactId>
-        <configuration>
-          <!-- TODO: Clean-up Checkstyle -->
-          <failOnViolation>false</failOnViolation>
         </configuration>
       </plugin>
     </plugins>

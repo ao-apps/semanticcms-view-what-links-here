@@ -21,7 +21,7 @@
  * along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.semanticcms.view.what_links_here.book;
+package com.semanticcms.view.whatlinkshere.book;
 
 import com.aoapps.net.URIParametersUtils;
 import com.aoapps.servlet.http.HttpServletUtil;
@@ -33,6 +33,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * Performs redirects for conversion to modular apidocs.
+ */
 @WebServlet("/view-what-links-here/apidocs/com/*")
 public class ModularApidocsRedirect extends HttpServlet {
 
@@ -42,7 +45,7 @@ public class ModularApidocsRedirect extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     HttpServletUtil.sendRedirect(
         HttpServletResponse.SC_MOVED_PERMANENTLY, req, resp,
-        "/view-what-links-here/apidocs/com.semanticcms.view.what_links_here/com" + Objects.toString(req.getPathInfo(), ""),
+        "/view-what-links-here/apidocs/com.semanticcms.view.whatlinkshere/com" + Objects.toString(req.getPathInfo(), ""),
         URIParametersUtils.of(req.getQueryString()), true, false
     );
   }
