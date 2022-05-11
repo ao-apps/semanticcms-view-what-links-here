@@ -33,7 +33,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
   <packaging>bundle</packaging>
 
   <properties>
-    <module.name>com.semanticcms.view.what_links_here.book</module.name>
+    <module.name>com.semanticcms.view.whatlinkshere.book</module.name>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>semanticcms-view-what-links-here</documented.artifactId>
     <documented.name>SemanticCMS View What Links Here²</documented.name>
@@ -131,13 +131,6 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
             <dependency>com.aoapps:ao-badges</dependency>
             <dependency>com.aoapps:ao-web-resources-registry</dependency>
           </ignoredDependencies>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId><artifactId>maven-checkstyle-plugin</artifactId>
-        <configuration>
-          <!-- TODO: Clean-up Checkstyle -->
-          <failOnViolation>false</failOnViolation>
         </configuration>
       </plugin>
     </plugins>

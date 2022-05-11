@@ -20,8 +20,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/licenses/>.
  */
-module com.semanticcms.view.what_links_here.book {
-  exports com.semanticcms.view.what_links_here.book;
+module com.semanticcms.view.whatlinkshere.book {
+  exports com.semanticcms.view.whatlinkshere.book;
   // Direct
   requires com.aoapps.badges; // <groupId>com.aoapps</groupId><artifactId>ao-badges</artifactId>
   requires com.aoapps.net.types; // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>

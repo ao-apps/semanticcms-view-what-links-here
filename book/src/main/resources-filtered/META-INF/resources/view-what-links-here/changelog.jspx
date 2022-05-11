@@ -37,7 +37,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     shortTitle="Changelog"
     tocLevels="1"
     datePublished="2016-10-31T03:26:24-05:00"
-    dateModified="2022-03-21T05:50:15-05:00"
+    dateModified="2022-05-04T04:08:06-05:00"
   >
     <c:if test="${fn:endsWith('@{project.version}', '-SNAPSHOT') and !fn:endsWith('@{project.version}', '-POST-SNAPSHOT')}">
       <changelog:release
@@ -59,6 +59,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
         <ul>
           <li>Updated for <core:link book="/" page="/" /> 2 compatibility.</li>
           <li>Updated dependencies.</li>
+          <li>Renamed package from <code>com.semanticcms.view.what_links_here</code> to <code>com.semanticcms.view.whatlinkshere</code>.</li>
         </ul>
       </changelog:release>
     </c:if>

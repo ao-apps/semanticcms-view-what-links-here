@@ -20,8 +20,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/licenses/>.
  */
-module com.semanticcms.view.what_links_here {
-  exports com.semanticcms.view.what_links_here;
+module com.semanticcms.view.whatlinkshere {
+  exports com.semanticcms.view.whatlinkshere;
   // Direct
   requires com.aoapps.html.servlet; // <groupId>com.aoapps</groupId><artifactId>ao-fluent-html-servlet</artifactId>
   requires com.aoapps.net.types; // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>

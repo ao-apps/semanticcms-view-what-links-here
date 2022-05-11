@@ -21,7 +21,7 @@
  * along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.semanticcms.view.what_links_here;
+package com.semanticcms.view.whatlinkshere;
 
 import com.aoapps.html.servlet.FlowContent;
 import com.semanticcms.core.controller.CapturePage;
@@ -42,10 +42,16 @@ import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * SemanticCMS view of which pages and elements link to the current page.
+ */
 public final class WhatLinksHereView extends View {
 
   public static final String NAME = "what-links-here";
 
+  /**
+   * Registers the "{@link #NAME}" view in {@link HtmlRenderer}.
+   */
   @WebListener("Registers the \"" + NAME + "\" view in HtmlRenderer.")
   public static class Initializer implements ServletContextListener {
     @Override
@@ -87,7 +93,10 @@ public final class WhatLinksHereView extends View {
   }
 
   /**
+   * {@inheritDoc}
+   * <p>
    * TODO: Is there a computationally inexpensive way to see if anything links here (without full page tree traversal?)
+   * </p>
    */
   @Override
   public boolean isApplicable(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
@@ -125,7 +134,7 @@ public final class WhatLinksHereView extends View {
         CaptureLevel.PAGE
     );
     flow.h1__(h1 -> h1
-            .text("What Links to ").text(page.getTitle())
+        .text("What Links to ").text(page.getTitle())
     );
     NavigationTreeRenderer.writeNavigationTree(
         servletContext,
