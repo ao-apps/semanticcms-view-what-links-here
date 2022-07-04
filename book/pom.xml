@@ -36,15 +36,15 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     <module.name>com.semanticcms.view.whatlinkshere.book</module.name>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>semanticcms-view-what-links-here</documented.artifactId>
-    <documented.name>SemanticCMS View What Links Here²</documented.name>
+    <documented.name>SemanticCMS View What Links Here</documented.name>
     <documented.description>SemanticCMS view of which pages and elements link to the current page.</documented.description>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
 
-  <name>SemanticCMS View What Links Here² Book</name>
+  <name>SemanticCMS View What Links Here Book</name>
   <url>https://semanticcms.com/view-what-links-here/</url>
-  <description>Documentation for SemanticCMS View What Links Here² in SemanticCMS format.</description>
+  <description>Documentation for SemanticCMS View What Links Here in SemanticCMS format.</description>
   <inceptionYear>2013</inceptionYear>
 
   <licenses>

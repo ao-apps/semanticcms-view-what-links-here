@@ -45,7 +45,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     <sonar.coverage.exclusions>**.*</sonar.coverage.exclusions>
   </properties>
 
-  <name>SemanticCMS View What Links Here²</name>
+  <name>SemanticCMS View What Links Here</name>
   <url>https://semanticcms.com/view-what-links-here/</url>
   <description>SemanticCMS view of which pages and elements link to the current page.</description>
   <inceptionYear>2013</inceptionYear>
