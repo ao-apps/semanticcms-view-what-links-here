@@ -41,6 +41,8 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     <documented.artifactId>semanticcms-view-what-links-here</documented.artifactId>
     <documented.name>SemanticCMS View What Links Here</documented.name>
     <documented.description>SemanticCMS view of which pages and elements link to the current page.</documented.description>
+    <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a>
+/ <a target="${javadoc.target}" href="${project.url}">View What Links Here</a>]]></javadoc.breadcrumbs>
 
     <description.html><![CDATA[Documentation for <a target="${javadoc.target}" href="${project.url}">${documented.name}</a> in <a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> format.]]></description.html>
   </properties>
