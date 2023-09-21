@@ -38,7 +38,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     <module.name>com.semanticcms.view.whatlinkshere</module.name>
     <javadoc.breadcrumbs><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a>
 / <a target="${javadoc.target}" href="${project.url}">View What Links Here</a>]]></javadoc.breadcrumbs>
-    
+
     <description.html><![CDATA[<a target="${javadoc.target}" href="https://semanticcms.com/">SemanticCMS</a> view of which pages and elements link to the current page.]]></description.html>
     <!-- TODO: Implement tests -->
     <sonar.coverage.exclusions>**.*</sonar.coverage.exclusions>
