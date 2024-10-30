@@ -1,6 +1,6 @@
 /*
  * semanticcms-view-what-links-here - SemanticCMS view of which pages and elements link to the current page.
- * Copyright (C) 2016, 2017, 2018, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2016, 2017, 2018, 2020, 2021, 2022, 2024  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -94,9 +94,8 @@ public final class WhatLinksHereView extends View {
 
   /**
    * {@inheritDoc}
-   * <p>
-   * TODO: Is there a computationally inexpensive way to see if anything links here (without full page tree traversal?)
-   * </p>
+   *
+   * <p>TODO: Is there a computationally inexpensive way to see if anything links here (without full page tree traversal?)</p>
    */
   @Override
   public boolean isApplicable(ServletContext servletContext, HttpServletRequest request, HttpServletResponse response, Page page) throws ServletException, IOException {
