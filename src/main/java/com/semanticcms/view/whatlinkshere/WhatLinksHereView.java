@@ -48,7 +48,7 @@ public final class WhatLinksHereView extends View {
   public static final String NAME = "what-links-here";
 
   /**
-   * Registers the "{@link #NAME}" view in {@link SemanticCMS}.
+   * Registers the "{@link WhatLinksHereView#NAME}" view in {@link SemanticCMS}.
    */
   @WebListener("Registers the \"" + NAME + "\" view in SemanticCMS.")
   public static class Initializer implements ServletContextListener {
