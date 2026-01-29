@@ -50,7 +50,7 @@ public final class WhatLinksHereView extends View {
   public static final String NAME = "what-links-here";
 
   /**
-   * Registers the "{@link #NAME}" view in {@link HtmlRenderer}.
+   * Registers the "{@link WhatLinksHereView#NAME}" view in {@link HtmlRenderer}.
    */
   @WebListener("Registers the \"" + NAME + "\" view in HtmlRenderer.")
   public static class Initializer implements ServletContextListener {
