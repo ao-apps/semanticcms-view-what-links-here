@@ -29,12 +29,12 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     <relativePath>../../parent/pom.xml</relativePath>
   </parent>
 
-  <groupId>com.semanticcms</groupId><artifactId>semanticcms-view-what-links-here-book</artifactId><version>2.0.1-SNAPSHOT</version>
+  <groupId>com.semanticcms</groupId><artifactId>semanticcms-view-what-links-here-book</artifactId><version>2.0.1</version>
   <packaging>jar</packaging>
 
   <properties>
     <!-- Must be set to ${git.commit.time} for snapshots or ISO 8601 timestamp for releases. -->
-    <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-02-09T21:11:14Z</project.build.outputTimestamp>
     <module.name>com.semanticcms.view.whatlinkshere.book</module.name>
     <subproject.subpath>book/</subproject.subpath>
     <!-- These values are copied from the project being documented -->
@@ -81,7 +81,7 @@ along with semanticcms-view-what-links-here.  If not, see <https://www.gnu.org/l
     <connection>scm:git:git://github.com/ao-apps/semanticcms-view-what-links-here.git</connection>
     <developerConnection>scm:git:git@github.com:ao-apps/semanticcms-view-what-links-here.git</developerConnection>
     <url>https://github.com/ao-apps/semanticcms-view-what-links-here</url>
-    <tag>HEAD</tag>
+    <tag>semanticcms-view-what-links-here-book-2.0.1</tag>
   </scm>
 
   <issueManagement>
